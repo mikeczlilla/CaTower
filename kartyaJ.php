@@ -18,7 +18,7 @@ $kartya_adatok = [
 
 
 if (!isset($_SESSION['pakli']) || isset($_GET['uj_jatek'])) {
-    if(isset($_GET['uj_jatek'])) { session_unset(); }
+    if(isset($_GET['uj_jatek'])) { session_unset(); session_start(); }
     
     $_SESSION['ertekek'] = $kartya_adatok;
     $pakli = array_keys($kartya_adatok);
@@ -28,8 +28,9 @@ if (!isset($_SESSION['pakli']) || isset($_GET['uj_jatek'])) {
     $_SESSION['torony'] = array_splice($_SESSION['pakli'], 0, 5);
     $_SESSION['felfedett_torony'] = array_fill(0, 5, false);
     $_SESSION['kez'] = array_splice($_SESSION['pakli'], 0, 5);
-    $_SESSION['uzenet'] = "A CaTower Duel System online. Válassz egy egységet!";
+    $_SESSION['uzenet'] = "A CaTower Duel System online. A támadó lapod megmarad a kezedben!";
 }
+
 
 // Támadás logika
 if (isset($_GET['tamadas']) && isset($_GET['kez_index'])) {
@@ -43,19 +44,20 @@ if (isset($_GET['tamadas']) && isset($_GET['kez_index'])) {
     $torony_te = $_SESSION['ertekek'][$torony_nev];
 
     if ($sajat_te > $torony_te) {
+       
         $_SESSION['torony'][$t_idx] = $sajat_nev;
         $_SESSION['felfedett_torony'][$t_idx] = true;
-        unset($_SESSION['kez'][$k_idx]);
-        $_SESSION['kez'] = array_values($_SESSION['kez']);
-        $_SESSION['uzenet'] = "SIKER! $sajat_nev ($sajat_te) áttörte a védelmet!";
+        $_SESSION['uzenet'] = "SIKER! $sajat_nev ($sajat_te) elfoglalta a bástyát.";
     } else {
+        
         if (count($_SESSION['pakli']) > 0) {
             $_SESSION['kez'][] = array_shift($_SESSION['pakli']);
         }
-        $_SESSION['uzenet'] = "HIBA! $torony_nev ($torony_te) visszaverte a támadást. Erősítés érkezett.";
+        $_SESSION['uzenet'] = "HIBA! A védelem ($torony_te) túl erős volt. Erősítés érkezett a kezedbe.";
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="hu">
 
@@ -82,11 +84,11 @@ if (isset($_GET['tamadas']) && isset($_GET['kez_index'])) {
         <h3>Torony alapja (Célpontok)</h3>
         <?php foreach ($_SESSION['torony'] as $i => $lap): ?>
             <?php 
-                // Ha felfedett, a szám szerinti kép, különben a hatlap.png
+               
                 $kep = $_SESSION['felfedett_torony'][$i] ? "kepek/$lap.png" : "kepek/borito.png"; 
             ?>
             <div class="kartya" style="background-image: url('<?php echo $kep; ?>');">
-                <!-- Szöveg elrejtve, csak a kép látszik -->
+              
             </div>
         <?php endforeach; ?>
 
