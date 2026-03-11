@@ -130,3 +130,8 @@ button {
 h2{
   text-align: left;
 }
+.vissza{
+  text-decoration: none;  
+  color: #54a6d6;
+  background-color: #052e46;
+}
