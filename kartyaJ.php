@@ -7,11 +7,11 @@ $kartya_adatok = [
     "Szoftver-Sziámi" => 2, "Bináris Bolyhos" => 3, "Adat-Alvó" => 3, "Neon-Mancs" => 3,
     "Kiber-Kandúr" => 4, "Lézer-Szem" => 4, "Tűzfal-Tigris" => 4, "Plazma-Purrogó" => 5,
     "Wifi-Vadász" => 5, "Glitch-Gereblye" => 5, "Szonár-Szőrmók" => 6, "Hologram-Hektór" => 6,
-    "Kvantum-Karmoló" => 6, "Bionikus-Brit" => 7, "Szatellit-Suttyó" => 7, "Virtuális-Vadorzó" => 7,
+    "Kvantum-Karmoló" => 6, "Bionikus-Brit" => 7, "Szatellit-Suttyó " => 7, "Virtuális-Vadorzó" => 7,
     "Titán-Tányérnyaló" => 8, "Szerver-Szörny" => 8, "Neon-Nagyúr" => 8, "Kripto-Király" => 9,
     "Mega-Mancs" => 9, "Áramkör-Alfa" => 9, "CaTower-Bajnok" => 10, "Kibernetikus-Káosz" => 10,
     "Frissített-Foltos" => 2, "Turbo-Turbékoló" => 4, "LED-Leopárd" => 6, "Adat-Dömötör" => 1,
-    "Szignál-Szafari" => 3, "Bites-Behemót" => 8, "Kódolt-Kutyaűző" => 5, "Hálózati-Házimacska" => 2,
+    "Szignál-Szafari " => 3, "Bites-Behemót" => 8, "Kódolt-Kutyaűző" => 5, "Hálózati-Házimacska" => 2,
     "Lézer-Lujza" => 7, "Fantom-Folt" => 9, "Alap-Algoritmus" => 1, "Sztenderd-Szőr" => 1
 ];
 
