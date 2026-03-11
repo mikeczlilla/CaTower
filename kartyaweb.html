@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
@@ -20,9 +20,9 @@
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Kártya ismertető</a>
+            <a href="kartyaismerteto.html">Kártya ismertető</a>
             <a href="kartyaJ.php" target="_blank" class="menu-gomb">Játék</a>
-            <a href="#">készítők:</a>
+            <a href="keszitok.html">készítők:</a>
         </div>
 
 
@@ -30,25 +30,87 @@
     </nav>
     <h1>Szabályzat</h1>
 
-    <p>
+    <h2>
         Előkészületek
-        Keverjétek meg a paklit.
-        Helyezzetek 5 lapot lefordítva egy sorba az asztal közepére mind két játékos. Ez a „Torony alapja”.
-        Minden játékos kap 5 lapot a kezébe.
-        A maradék pakli lesz a húzópakli.
+    </h2>
+
+    <ul id="szoveg">
+        <li>
+            Keverjétek meg a paklit.
+        </li>
+        <li>
+            Helyezzetek 5 lapot lefordítva egy sorba az asztal közepére mind két játékos. Ez a „Torony alapja”.
+        </li>
+        <li>
+            Minden játékos kap 5 lapot a kezébe.
+        </li>
+        <li>
+            A maradék pakli lesz a húzópakli.
+        </li>
+    </ul>
+    <h2>
         A játék menete
-        A legfiatalabb kezd, a kör az óramutató járásával megegyezően halad. A soron lévő játékos két dolgot tehet:
-        1. Támadás a Torony ellen
-        Kicsaphatsz egy lapot a kezedből az asztalon lévő 5 lefordított lap egyikére.
-        Ha a te lapod magasabb, mint a Toronyé: A Torony lapját eldobod a süllyesztőbe, a saját lapodat pedig
-        felfordítva
-        a helyére teszed.
-        Ha a te lapod alacsonyabb vagy egyenlő: Nem sikerült az ostrom! Eldobod a lapodat, és büntetésből húznod
-        kell egyet a pakliból. A Torony lapja marad a helyén (visszafordítva).
-        2. Kijátszás (Passzolás)
-        Ha nem akarsz vagy nem tudsz támadni, húznod kell egy lapot, és a köröd véget ér.
-        Az nyer aki hamarabb elfoglalja az ellenfél összes tornyát.
-    </p>
+    </h2>
+
+    <ul id="szoveg">
+        <li>
+            A legfiatalabb kezd, a kör az óramutató járásával megegyezően halad.
+        </li>
+        <li>
+            A soron lévő játékos két dolgot tehet:
+        </li>
+        <ul>
+            <h4>
+                1. Támadás a Torony ellen
+            </h4>
+
+            </li>
+            <li>
+                Kicsaphatsz egy lapot a kezedből az asztalon lévő 5 lefordított lap egyikére.
+            </li>
+            <li>
+                Ha a te lapod magasabb, mint a Toronyé:
+            </li>
+            <ul>
+                <li>
+                    A Torony lapját eldobod a süllyesztőbe, a saját lapodat pedig
+                    felfordítva
+                    a helyére teszed.
+                </li>
+            </ul>
+            <li>
+                Ha a te lapod alacsonyabb vagy egyenlő:
+            </li>
+            <ul>
+                <li>
+                    Nem sikerült az ostrom! Eldobod a lapodat, és büntetésből húznod
+                    kell egyet a pakliból. A Torony lapja marad a helyén (visszafordítva).
+                </li>
+            </ul>
+
+
+            <h4>
+                2. Kijátszás (Passzolás)
+            </h4>
+            <li>
+                Ha nem akarsz vagy nem tudsz támadni, húznod kell egy lapot, és a köröd véget ér.
+            </li>
+            <li>
+                Az nyer aki hamarabb elfoglalja az ellenfél összes tornyát.
+            </li>
+
+        </ul>
+    </ul>
+
+
+
+
+
+
+
+
+
+
 
     <script>
         function openNav() {
