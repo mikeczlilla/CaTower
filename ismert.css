@@ -1,0 +1,16 @@
+body {
+    background-color: #38b6ff;
+    text-align: center;
+    margin: 0px;
+}
+
+table{
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0px 40px;
+}
+
+.kep:hover{
+    transform: scale(1.6);
+    transition: 0.3s;
+}
