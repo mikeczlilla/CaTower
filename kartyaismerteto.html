@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CaTower</title>
     <link rel="stylesheet" href="kartya.css">
 </head>
+
 <body>
     <nav>
 
@@ -18,14 +20,27 @@
         </div>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="kartyaismerteto.html">Kártya ismertető</a>
+            <a href="kartyaweb.html">Szabályzat</a>
             <a href="kartyaJ.php" target="_blank" class="menu-gomb">Játék</a>
-            <a href="#">készítők:</a>
+            <a href="keszitok.html">készítők:</a>
         </div>
 
 
 
     </nav>
-    
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <h1>Kártya ismertető</h1>
+
 </body>
+
 </html>
