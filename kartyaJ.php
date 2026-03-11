@@ -138,6 +138,6 @@ if (!in_array(false, $_SESSION['felfedett_torony'])) {
 <a href="?uj_jatek=1" style="color: #075a8a;">[ ÚJ JÁTÉK INDÍTÁSA ]</a>
 <br>
 <br>
-<a class="vissza" href="kartyaweb.html"> Vissza a főoldalra</a>
+<a class="vissza" href="index.html"> Vissza a főoldalra</a>
 </body>
 </html>
