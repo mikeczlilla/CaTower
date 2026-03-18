@@ -80,8 +80,7 @@ if ($_SESSION['kor'] == 'gep' && !$_SESSION['jatek_vege']) {
     $gep_k_idx = array_rand($_SESSION['gep_keze']);
     $gep_kartya = $_SESSION['gep_keze'][$gep_k_idx];
     
-    // Gép csak olyan saját bástyánkat támadja, ami már nála van (vagyis borító van rajta)
-    // De az egyszerűség kedvéért maradjunk a véletlennél, de ellenőrizzük a feltételt
+   
     $t_idx = rand(0, 4);
     
     if ($_SESSION['ertekek'][$gep_kartya] >= $_SESSION['ertekek'][$_SESSION['sajat_torony'][$t_idx]]) {
