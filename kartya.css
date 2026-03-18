@@ -101,6 +101,12 @@ span {
   background-position: center;
   background-repeat: no-repeat;
 }
+.kartya:hover {
+  transform: scale(1.8);
+  transition: 0.3s;
+  position: relative;
+  z-index: 10;
+}
 .leforditott {
   background: #333;
   color: white;
@@ -123,19 +129,19 @@ button {
   cursor: pointer;
   font-weight: bold;
 }
-#szoveg{
+#szoveg {
   font-size: 18px;
   text-align: left;
 }
-h2{
+h2 {
   text-align: left;
 }
-.vissza{
-  text-decoration: none;  
+.vissza {
+  text-decoration: none;
   color: #54a6d6;
   background-color: #052e46;
 }
-.something{
+.something {
   background-image: url(./kepek/Névtelen\ terv.png);
   color: invisible;
 }
