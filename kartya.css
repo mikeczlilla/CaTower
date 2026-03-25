@@ -145,6 +145,16 @@ h2 {
   background-image: url(./kepek/Névtelen\ terv.png);
   color: invisible;
 }
+.menu-sav {
+  display: flex;
+  flex-direction: row;     
+  justify-content: center;
+  align-items: center;      
+  gap: 10px;                
+  padding-right: 15px;     
+  width: 100%;
+  box-sizing: border-box;
+}
 @media (max-width: 1024px) {
   .kartya{
     width: 95px;
@@ -191,5 +201,5 @@ h2 {
       padding-right: 15px;     
       width: 100%;
       box-sizing: border-box;
-    }
+    }  
 }
