@@ -115,7 +115,7 @@ if (isset($_GET['gep_lep']) && $_SESSION['kor'] == 'gep_gondolkodik') {
 
     $_SESSION['gep_keze'] = array_values($_SESSION['gep_keze']);
     $_SESSION['kor'] = 'jatekos';
-    header("Location: " . $_SERVER['PHP_SELF']); 
+    header("Location: " . $_SERVER['PHP_SELF']);
     exit;
 }
 
@@ -162,7 +162,13 @@ if (!in_array(true, $_SESSION['felfedett_sajat'])) {
 </head>
 
 <body class="asztal">
-
+<div class="menu-sav">
+        <form method="GET">
+            <button class="panel" type="submit" name="passz" value="1">PASSZ / HÚZÁS</button>
+        </form>
+        <a class="panel" href="?uj_jatek=1" style="color: #075a8a;">[ ÚJ JÁTÉK ]</a>
+        <a class="panel" href="index.html" style="color: #075a8a;">Főoldal</a>
+    </div>
     <?php if ($_SESSION['jatek_vege']): ?>
         <div class="overlay">
             <div>
@@ -172,12 +178,11 @@ if (!in_array(true, $_SESSION['felfedett_sajat'])) {
         </div>
     <?php endif; ?>
 
-    <h1>CaTower Duel</h1>
     <p class="info"><?php echo $_SESSION['uzenet']; ?></p>
 
     <div class="<?php echo ($_SESSION['kor'] == 'gep_gondolkodik') ? 'disabled-ui' : ''; ?>">
         <div class="torony-resz">
-            <h3>ELLENSÉG BÁSTYÁI (Pakli: <?php echo count($_SESSION['pakli_gep']); ?>)</h3>
+            <h3 class="szöv">ELLENSÉG BÁSTYÁI (Pakli: <?php echo count($_SESSION['pakli_gep']); ?>)</h3>
             <?php foreach ($_SESSION['ellenseg_torony'] as $i => $nev): ?>
                 <div class="kartya-blokk">
                     <div class="kartya" style="background-image: url('kepek/<?php echo $_SESSION['felfedett_ellenseg'][$i] ? $nev : 'borito'; ?>.png'); border: 2px solid red;"></div>
@@ -186,7 +191,6 @@ if (!in_array(true, $_SESSION['felfedett_sajat'])) {
         </div>
 
         <div class="torony-resz">
-            <h3>SAJÁT BÁSTYÁID</h3>
             <?php foreach ($_SESSION['sajat_torony'] as $i => $nev): ?>
                 <div class="kartya-blokk">
                     <div class="kartya" style="background-image: url('kepek/<?php echo $_SESSION['felfedett_sajat'][$i] ? $nev : 'borito'; ?>.png'); border: 2px solid green;"></div>
@@ -198,7 +202,7 @@ if (!in_array(true, $_SESSION['felfedett_sajat'])) {
         <hr>
 
         <div class="kez-resz">
-            <h3>A TE KEZED (Pakli: <?php echo count($_SESSION['pakli_jatekos']); ?>)</h3>
+            <h3 class="szöv">A TE KEZED (Pakli: <?php echo count($_SESSION['pakli_jatekos']); ?>)</h3>
             <?php if ($_SESSION['kor'] == 'jatekos'): ?>
                 <?php foreach ($_SESSION['kez'] as $nev): ?>
                     <form method="GET" class="kartya-blokk">
@@ -208,12 +212,12 @@ if (!in_array(true, $_SESSION['felfedett_sajat'])) {
                             <?php foreach ($_SESSION['felfedett_ellenseg'] as $idx => $f): if (!$f) echo "<option value='$idx'>" . ($idx + 1) . ". ellenséges</option>";
                             endforeach; ?>
                         </select>
-                        <input type="hidden" name="sajat_nev" value="<?php echo $nev; ?>">
-                        <button type="submit" name="tamadas" value="1">TÁMADÁS</button>
+                        <input class="gomb" type="hidden" name="sajat_nev" value="<?php echo $nev; ?>">
+                        <button class="gomb" id="tám" type="submit" name="tamadas" value="1">TÁMADÁS</button>
                     </form>
                 <?php endforeach; ?>
                 <br>
-                <form method="GET"><button type="submit" name="passz" value="1">PASSZ / HÚZÁS</button></form>
+                
             <?php endif; ?>
         </div>
     </div>
@@ -234,7 +238,7 @@ if (!in_array(true, $_SESSION['felfedett_sajat'])) {
             }, 1000);
         </script>
     <?php endif; ?>
-    <br><a href="?uj_jatek=1" style="color: #075a8a;">[ ÚJ JÁTÉK ]</a>
+    
 
 </body>
 
